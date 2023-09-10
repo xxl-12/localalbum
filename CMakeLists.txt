@@ -1,0 +1,51 @@
+﻿
+wps_package(KLocalAlbum EXECUTABLE)
+	wps_include_directories(
+		ui
+		logic
+		data
+		pictures
+	)
+	wps_add_sources(
+		QT_AUTOMOC
+		ui/main.cpp
+		ui/kalbumcontrolwidget.h
+		ui/kalbumcontrolwidget.cpp
+		ui/kcustomtitlebar.h
+		ui/kcustomtitlebar.cpp
+		ui/klocalalbum.cpp
+		ui/klocalalbum.h
+		ui/kpicturecontrolwidget.h
+		ui/kpicturecontrolwidget.cpp
+		ui/ksettingwindow.h
+		ui/ksettingwindow.cpp
+		ui/kimageviewer.h
+		ui/kimageviewer.cpp
+		ui/kimageviewwindow.h
+		ui/kimageviewwindow.cpp
+		data/kdatabase.h
+		data/kdatabase.cpp
+		data/kdatabaseaccess.h
+		data/kdatabaseaccess.cpp
+		data/kdatastruct.h
+		logic/kalbummodel.h
+		logic/kalbummodel.cpp
+		logic/kthumbnaildelegate.h
+		logic/kthumbnaildelegate.cpp
+		logic/kthumbnailproxymodel.h
+		logic/kthumbnailproxymodel.cpp
+		logic/kpicturemodel.h
+		logic/kpicturemodel.cpp
+		resource.qrc
+	)
+
+	wps_use_packages(
+		Qt5Widgets
+		Qt5WinExtras
+		Qt5Sql
+	)
+	wps_add_definitions(
+		_WIN32_IE=0x0700
+	)
+
+wps_end_package()
